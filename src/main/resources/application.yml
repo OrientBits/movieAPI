@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: movieAPI
+
+  output:
+    ansi:
+      enabled: always
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/movie_api
+    username: root
+    password: root
+
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql:true
+
