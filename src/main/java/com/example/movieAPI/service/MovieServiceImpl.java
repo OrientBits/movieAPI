@@ -181,6 +181,4 @@ public class MovieServiceImpl implements MovieService {
         return "Movie deleted with ID: "+movieId;
     }
 
-
-
 }
