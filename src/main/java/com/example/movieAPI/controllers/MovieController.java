@@ -54,7 +54,6 @@ public class MovieController {
     @DeleteMapping("/{movieId}")
     public String deleteMovieHandler(@PathVariable Integer movieId) throws IOException {
         return movieService.deleteMovie(movieId);
-
     }
 
 
