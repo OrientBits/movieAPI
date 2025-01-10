@@ -171,16 +171,17 @@ public class MovieServiceImpl implements MovieService {
 
     @Override
     public String deleteMovie(Integer movieId) throws IOException {
+
+        System.out.println("inside delete movie service.....");
         Movie movie = movieRepository.findById(movieId).orElseThrow(
                 () -> new RuntimeException("Movie with id: " + movieId + " doesn't exist"));
 
         Files.deleteIfExists(Paths.get(path+File.separator+movie.getPoster()));
+        System.out.println("after file delete movie service.....");
 
         movieRepository.deleteById(movieId);
 
         return "Movie deleted with ID: "+movieId;
     }
-
-
 
 }
