@@ -51,6 +51,11 @@ public class MovieController {
         return ResponseEntity.ok(movieService.updateMovie(movieId,movieDto1,file));
     }
 
+    @DeleteMapping("/movieId")
+    public String deleteMovieHandler(@PathVariable Integer movieId) throws IOException {
+        return movieService.deleteMovie(movieId);
+        
+    }
 
 
     private MovieDto convertToMovieDto(String movieDtoObj) throws JsonProcessingException {
