@@ -1,6 +1,6 @@
 package com.example.movieAPI.dto;
 
-
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,7 +8,6 @@ import lombok.NoArgsConstructor;
 
 
 import java.util.Set;
-
 
 public class MovieDto {
 
@@ -32,6 +31,7 @@ public class MovieDto {
 
     @NotBlank(message = "Please provide poster URL!")
     private String posterUrl;
+
 
 
     public MovieDto() {
@@ -125,4 +125,5 @@ public class MovieDto {
                 ", posterUrl='" + posterUrl + '\'' +
                 '}';
     }
+
 }
