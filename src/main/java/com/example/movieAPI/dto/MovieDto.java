@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 
 import java.util.Set;
 
+@NoArgsConstructor
+@AllArgsConstructor
 public class MovieDto {
 
     private Integer movieId;
@@ -33,20 +35,6 @@ public class MovieDto {
     private String posterUrl;
 
 
-
-    public MovieDto() {
-    }
-
-    public MovieDto(Integer movieId, String title, String director, String studio, Set<String> movieCast, Integer releaseYear, String poster, String posterUrl) {
-        this.movieId = movieId;
-        this.title = title;
-        this.director = director;
-        this.studio = studio;
-        this.movieCast = movieCast;
-        this.releaseYear = releaseYear;
-        this.poster = poster;
-        this.posterUrl = posterUrl;
-    }
 
     public Integer getMovieId() {
         return movieId;
